@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DNA Lab</title>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script src="dna.js"></script>
+
+<style>
+	body {
+		background-image: url(Dna_wallpapers_119.jpg);
+		background-size: cover;	
+	}
+	.content {
+		width: 600px;
+		margin: auto;
+		margin-top: 50px;
+		border-radius: 5px;
+		padding: 20px;
+		background-color: rgba(255,255,255,0.75);
+	}
+	
+	.button {
+		width: 150px;
+		height: 35px;
+		padding-top: 10px;
+		font-size: 20px;
+		background-color: #3E8CE3;
+		color: #FFF;
+		border-radius: 5px;
+		text-align: center;
+		margin: auto;
+		margin-top: 5px;
+		margin-bottom: 5px;
+
+		-webkit-transition: background-color 0.5s;
+		transition: background-color 0.5s;
+	}
+	
+	.button:hover {
+		background-color: #155193;
+	}
+	
+	#inputDNA {
+		width: 100%;	
+	}
+	
+	.dnaString {
+		font-family: "Lucida Console", Monaco, monospace;
+		font-weight: bold;
+	}
+	
+	#result {
+		text-align: center;
+		background-color: rgba(255, 255, 255, 0.84);
+		border-radius: 5px;
+		margin-top: 10px;
+		padding: 20px;	
+	}
+	
+	#dna h2{
+		color: #0BB601;
+		font-weight: bold;
+	}
+	
+	#rna h2 {
+		font-weight: bold;
+		color: #FD2600;
+	}
+	#dna_t {
+		color: rgb(40, 109, 8);
+	}
+	#dna_u {
+		color: rgb(26, 175, 255);
+	}
+	#dna_a {
+		color: rgb(177, 21, 0);
+	}
+	#dna_c {
+		color: rgb(0, 101, 211);
+	}
+	#dna_g {
+		color: rgb(224, 206, 0);
+	}
+	
+	.aminoacid {
+		cursor: pointer;
+	}
+	.info {
+		background-color: #818181;
+		border-radius:5px;
+		width: 400px;
+	}
+</style>
+
+</head>
+
+<body>
+<div class="info"></div>
+<div class="content">
+
+    <div id="rnadomDNAButton" class="button">Random DNA</div>
+    <label for="inputDNA">DNA:</label><input name="inputDNA" id="inputDNA" type="text" >
+    <div id="analyze" class="button">Analyze</div>
+
+</div>
+<div id="result">
+
+    <div id="dna">
+        <h2>DNA</h2>
+        <p class="dnaString" id="dna_left"></p>
+        <p class="dnaString" id="dna_right"></p>
+    </div>
+    <div id="rna">
+        <h2>RNA</h2>
+        <p class="dnaString" id="rna_left"></p>
+        <p class="dnaString" id="rna_right"></p>
+    </div>
+    <h2>Amino Acids:</h2>
+    <p class="dnaString" id="amino"></p>
+</div>
+
+
+</body>
+</html>
